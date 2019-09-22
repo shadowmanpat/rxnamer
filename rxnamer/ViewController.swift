@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var helloLbl: UILabel!
+    @IBOutlet weak var nameEntryTxtField: UITextField!
+    @IBOutlet weak var submitBtn: UIButton!
+    @IBOutlet weak var namesLbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
