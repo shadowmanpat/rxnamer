@@ -24,6 +24,21 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         bindTextField()
         bindSubmitBtn()
+        bindAddNamebtn()
+        
+        namesArray.asObservable().subscribe(onNext: { (name) in
+            self.namesLbl.text = name.joined(separator: ", ")
+        }, onError: { (error) in
+            
+        }, onCompleted: {
+            
+        }) {
+            
+        }
+            
+//            .subscribe({ names in
+//            self.namesLbl.textInputMode = names.joined(separator: ", ")
+//        })
     }
 
     func bindTextField(){
@@ -52,6 +67,19 @@ class ViewController: UIViewController {
             }
         }).disposed(by: disposeBag)
     }
-
+    @IBOutlet weak var addNameBtn: UIButton!
+    
+    func bindAddNamebtn(){
+        addNameBtn.rx.tap.throttle(RxTimeInterval.milliseconds(500), scheduler: MainScheduler.instance).subscribe(onNext: {
+            guard let addNameVC = self.storyboard?.instantiateViewController(withIdentifier: "AddNameVC") as? AddNameVC else {fatalError ("cound not create AddNameVC")}
+            addNameVC.nameSubject.subscribe(onNext: { name in
+                self.namesArray.value.append(name)
+                addNameVC.dismiss(animated: true, completion: nil)
+                
+            })
+                .disposed(by: self.disposeBag)
+            self.present(addNameVC,animated: true,completion: nil)
+        })
+    }
 }
 

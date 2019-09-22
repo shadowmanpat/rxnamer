@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		345CF11D2337FD7F0048A2B8 /* AddNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345CF11C2337FD7F0048A2B8 /* AddNameVC.swift */; };
 		349D98052337BA4100A410F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D98042337BA4100A410F5 /* AppDelegate.swift */; };
 		349D98072337BA4100A410F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349D98062337BA4100A410F5 /* ViewController.swift */; };
 		349D980A2337BA4100A410F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349D98082337BA4100A410F5 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		2AC0B6F3834EDDD4F1BD24BF /* Pods-rxnamer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rxnamer.debug.xcconfig"; path = "Target Support Files/Pods-rxnamer/Pods-rxnamer.debug.xcconfig"; sourceTree = "<group>"; };
+		345CF11C2337FD7F0048A2B8 /* AddNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNameVC.swift; sourceTree = "<group>"; };
 		349D98012337BA4100A410F5 /* rxnamer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rxnamer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		349D98042337BA4100A410F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		349D98062337BA4100A410F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				349D980B2337BA4100A410F5 /* Assets.xcassets */,
 				349D980D2337BA4100A410F5 /* LaunchScreen.storyboard */,
 				349D98102337BA4100A410F5 /* Info.plist */,
+				345CF11C2337FD7F0048A2B8 /* AddNameVC.swift */,
 			);
 			path = rxnamer;
 			sourceTree = "<group>";
@@ -85,7 +88,6 @@
 				2AC0B6F3834EDDD4F1BD24BF /* Pods-rxnamer.debug.xcconfig */,
 				5AFA43602430034D6C50EEF6 /* Pods-rxnamer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -206,6 +208,7 @@
 			files = (
 				349D98072337BA4100A410F5 /* ViewController.swift in Sources */,
 				349D98052337BA4100A410F5 /* AppDelegate.swift in Sources */,
+				345CF11D2337FD7F0048A2B8 /* AddNameVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

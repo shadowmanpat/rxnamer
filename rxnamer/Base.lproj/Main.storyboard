@@ -59,16 +59,25 @@
                                     <constraint firstAttribute="height" constant="400" id="tA5-Xs-5Ht"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKN-Is-bR8">
+                                <rect key="frame" x="30" y="572" width="354" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="+ADD NAME"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="oKN-Is-bR8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="20O-ED-5YM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yvA-B8-SDf" secondAttribute="trailing" constant="20" id="HDp-rV-bKq"/>
                             <constraint firstItem="yvA-B8-SDf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LFk-qY-1cO"/>
                             <constraint firstItem="yvA-B8-SDf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="d7J-5e-bT8"/>
+                            <constraint firstItem="oKN-Is-bR8" firstAttribute="top" secondItem="yvA-B8-SDf" secondAttribute="bottom" constant="8" id="hjs-wU-P6c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oKN-Is-bR8" secondAttribute="trailing" constant="30" id="q7n-dV-dVy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="addNameBtn" destination="oKN-Is-bR8" id="dV6-Ny-Naa"/>
                         <outlet property="helloLbl" destination="tG5-QF-qea" id="Ot7-K9-mY3"/>
                         <outlet property="nameEntryTxtField" destination="ucO-oF-THv" id="dLL-Zn-3VR"/>
                         <outlet property="namesLbl" destination="dpj-Vd-eMd" id="Er7-vM-M2j"/>
@@ -78,6 +87,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+        <!--Add NameVC-->
+        <scene sceneID="mSe-pU-jjR">
+            <objects>
+                <viewController storyboardIdentifier="AddNameVC" id="ZWK-zu-YQR" customClass="AddNameVC" customModule="rxnamer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bt-ga-gmP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="YAu-kF-Dm5">
+                                <rect key="frame" x="20" y="164" width="374" height="120"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NvT-n3-Muv">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="63"/>
+                                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njS-mN-sVY">
+                                        <rect key="frame" x="0.0" y="87" width="374" height="33"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="JKd-kb-U4W"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Li7-S4-5Ky" firstAttribute="trailing" secondItem="YAu-kF-Dm5" secondAttribute="trailing" constant="20" id="3ne-xn-uHM"/>
+                            <constraint firstItem="YAu-kF-Dm5" firstAttribute="top" secondItem="Li7-S4-5Ky" secondAttribute="top" constant="120" id="CIh-vd-Nx0"/>
+                            <constraint firstItem="YAu-kF-Dm5" firstAttribute="leading" secondItem="Li7-S4-5Ky" secondAttribute="leading" constant="20" id="DdY-8K-hCb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Li7-S4-5Ky"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTxtField" destination="NvT-n3-Muv" id="qr7-Im-3ls"/>
+                        <outlet property="newNameTxtField" destination="YAu-kF-Dm5" id="gpA-2H-Ohc"/>
+                        <outlet property="submitBtn" destination="njS-mN-sVY" id="CQn-al-VDu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2G-Qh-Ccd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880" y="135"/>
         </scene>
     </scenes>
 </document>
